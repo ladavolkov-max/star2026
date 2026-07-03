@@ -9,4 +9,4 @@ A folder to organize all of our files throughout the 2026 STAR program
 
 A) getting initial files on tux: if you want to access the original CA files, they can be copied over from the bls directory using the instructions in the file describing the setup: The cybernetic automaton model has been reimplemented in Go and is currently available on tux. The directory: /home/bls96/ca has the source code, configurations, and driver scripts for most of the examples described in the dissertation on the subject. In addition to that directory, there’s a copy of the executable in the /home/bls96/bin directory.
 
-B) running the initial files in tux:
+B) running the initial files in tux: if you want to run any of the initialCA python driver programs, you run the driver with ./ and pass it the configuration file that you want to use as a commanf line argument, so the command is in the format: ./pythonFile.py configurationFile.cfg running it will give you the output and error of the python program as it runs a CA experiment with a CA behaving according to the behavior specified in its configuration file. For any the skinner.py driver use skinner.cfg, for all others use basic.cfg
