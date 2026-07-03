@@ -2,10 +2,10 @@
 A folder to organize all of our files throughout the 2026 STAR program
 
 1) reading: the pdf files given by the professor for information about the project.
-  1.1) dissertation: the full dissertation on the logic and implementation of the original CA
-  1.2) algo: explanation of the CA's mathematical algorithm
-  1.3) cause: instructions for setting up and running the CA
-  1.4) proto: a description of the blackboard structure and its implementation in a different context
+1.1) dissertation: the full dissertation on the logic and implementation of the original CA
+1.2) algo: explanation of the CA's mathematical algorithm
+1.3) cause: instructions for setting up and running the CA
+1.4) proto: a description of the blackboard structure and its implementation in a different context
   
 
 2) initialCA: all of the initial files and scripts for the CA, copied over from the bls directory mentioned in the implementation directions pdf. They contain the configuration files for the CA, implementation of the CA in go, and the driver programs to run the CA in python 2. You can also get these files from tux yourself and copy them over into your directory straight in the terminal (see point A, B)
