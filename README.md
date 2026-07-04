@@ -46,13 +46,17 @@ A folder to organize all of our files throughout the 2026 STAR program
 
 6.5) OneTrialForGraphics: runs the same was as OneTrial but with additional mechanics (storing all of the responses and positions in an arraylist) to communicate with the graphics implementation.
 
-6.6) GraphicsConnected: connects to OneTrialForGraphics to show how the mouse acts on a given trial. It is run by going to the graphics window and pressing enter. The actions are shown in 2 steps: one frame for the current position of the mouse with a text label of what action it's about to take (turnLR/move/press/nothing) and then the resulting position of that action. Continues until the trial is over. Starting another trial resets the graphics to start showing the visuals for the new trial.
+6.6) GraphicsConnected: connects to OneTrialForGraphics to show how the mouse acts on a given trial of the original skinner box experiment. It is run by going to the graphics window and pressing enter. The actions are shown in 2 steps: one frame for the current position of the mouse with a text label of what action it's about to take (turnLR/move/press/nothing) and then the resulting position of that action. Continues until the trial is over. Starting another trial resets the graphics to start showing the visuals for the new trial.
 
 6.7) OneTrial3x3: runs the one trial mechanic (with on graphics) in a 3x3 environment using the vision configuration. (see point D)
 
 6.8) OneTrial4x4: runs the one trial mechanic (with on graphics) in a 4x4 environment using the vision configuration. (see point D)
 
-6.9) OneTrial3x3ForG:
+6.9) OneTrial3x3ForG: connects to GridGraphics to show how the mouse acts on a given 3x3 trial. Runs the same was as OneTrial3x3 but with additional mechanics (storing all of the responses and positions in an arraylist) to communicate with the graphics implementation.
+
+6.10) GridGraphics: connects to OneTrialForGraphics3x3ForG to show how the mouse acts on a given trial on a 3x3 environment with the vision configuration (see point D). It is run by going to the graphics window and pressing enter. The actions are shown in 2 steps: one frame for the current position of the mouse with a text label of what action it's about to take (turnLR/move/press/nothing) and then the resulting position of that action. Continues until the trial is over. Starting another trial resets the graphics to start showing the visuals for the new trial.
+
+6.11) BatchForGraphing: runs a batch of original skinner trials the same way that the original algorithm does, sending information necessary to graph the mouse's progress the same way that they were in the dissertation. Plots and connects how many steps it took to complete each trial in the batch and graphs a trend line for that batch based on the least squares regression formula. 
 
 A) getting initial files on tux: if you want to access the original CA files, they can be copied over from the bls directory using the instructions in the cause file in the reading folder: The cybernetic automaton model has been reimplemented in Go and is currently available on tux. The directory: /home/bls96/ca has the source code, configurations, and driver scripts for most of the examples described in the dissertation on the subject. In addition to that directory, there’s a copy of the executable in the /home/bls96/bin directory.
 
