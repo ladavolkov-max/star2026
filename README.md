@@ -2,9 +2,13 @@
 A folder to organize all of our files throughout the 2026 STAR program
 
 1) reading: the pdf files given by the professor for information about the project.
+
 1.1) dissertation: the full dissertation on the logic and implementation of the original CA
+
 1.2) algo: explanation of the CA's mathematical algorithm
+
 1.3) cause: instructions for setting up and running the CA
+
 1.4) proto: a description of the blackboard structure and its implementation in a different context
   
 
