@@ -1,0 +1,33 @@
+//stuff to connect to c++ if necessary
+#ifdef CPLUSPLUS
+extern "C" {
+#endif
+
+//externally visible function 
+void *testMemory_init(void *dummy);
+
+//symbolic name for the data that will be posted to the blackboard
+#define PREVIOUS_ACTION 0x00020002
+//numbers??????????????????????????
+//numbers??????????????????????????
+//numbers??????????????????????????
+
+//encoding what we actually send to the blackboard
+enum ACTION_SCENARIO
+{
+    ACTION_SCENARIO_TURNED_L = 0,
+    ACTION_SCENARIO_TURNED_R = 1,
+    ACTION_SCENARIO_MOVED = 2,
+    ACTION_SCENARIO_PRESSED = 3
+}
+
+//defining the structure to post to blackboard
+struct action_data
+{
+    enum ACTION_SCENARIO scenario;
+};
+
+//stuff to connect to c++ if necessary
+#ifdef CPLUSPLUS
+}
+#endif
