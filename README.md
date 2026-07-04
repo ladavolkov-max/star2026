@@ -14,9 +14,25 @@ A folder to organize all of our files throughout the 2026 STAR program
 
 2) initialCA: all of the initial files and scripts for the CA, copied over from the bls directory mentioned in the implementation directions pdf. They contain the configuration files for the CA, implementation of the CA in go, and the driver programs to run the CA in python 2. You can also get these files from tux yourself and copy them over into your directory straight in the terminal (see point A, B)
 
+
 3) python3Translations: all of the driver programs from the initial CA files translated into python 3, along with all of the tools we needed for the translation. They can be run in your tux terminal. (see point B)
 
+
 4) filesForDesktop: the files related to running the CA on your local computer. These include the CA itself, along with the different configurations that can be used to structure its behavior. These should be kept on your desktop because our current code that uses them tells the coputer to look for them specifically on the desktop.
+
+
+5) javaInitialGraphics: code to get a basic feel of how the movement of the visual stimulation will work in java. This code can be run through bluej. (see point C) The descriptions are not for the specific files but for the classes that show up when you open the package.bluej file.
+
+5.1) DrawingTester: creates an empty graphics window
+
+5.2) MoveWithKeys: first version of a skinner visual where you can move the mouse around using the wasd or arrow keys
+
+5.3) RotateAndMove: skinner visual where you can move the mouse with wasd or arrow keys and turn it left/right with the 1/2 keys
+
+5.4) SkinnerWithGrid: skinner visual in 4x4 where the movements now follow the action outputs with 1/2 for turn and 3 for moving forward
+
+5.5) CompleteSkinnerMovement: movement with the action output keys in the 1x2 layout
+
 
 A) getting initial files on tux: if you want to access the original CA files, they can be copied over from the bls directory using the instructions in the file describing the setup: The cybernetic automaton model has been reimplemented in Go and is currently available on tux. The directory: /home/bls96/ca has the source code, configurations, and driver scripts for most of the examples described in the dissertation on the subject. In addition to that directory, there’s a copy of the executable in the /home/bls96/bin directory.
 
