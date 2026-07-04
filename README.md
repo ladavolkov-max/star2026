@@ -34,10 +34,25 @@ A folder to organize all of our files throughout the 2026 STAR program
 5.5) CompleteSkinnerMovement: movement with the action output keys in the 1x2 layout
 
 
-6) javaSkinnerWithGraphics: code to run visual simulations and observe results of skinner trials run with the CA. This code can be run through bluej. (see point C) Note: these files open a CA with different configurations (see point D), so if you want to test it with a different one then you can change the file name that is specified when opening it up within the code at the top. The descriptions are not for the specific files but for the classes that show up when you open the package.bluej file.
+6) javaSkinnerWithGraphics: code to run visual simulations and observe results of skinner trials run with the CA. Make sure that the files from filesForDesktop folder are on your desktop, since the code uses them to run. This code can be run through bluej. (see point C) Note: these files open a CA with different configurations (see point D), so if you want to test it with a different one then you can change the file name that is specified when opening it up within the code at the top. The descriptions are not for the specific files but for the classes that show up when you open the package.bluej file.
 
-6.5) OriginalAlgorithmTranslation: 
+6.1) OriginalAlgorithmTranslation: recreates the functionality of the original skinner algorithm to run on your own computer. Writes the same things to the output and error as the python 2 and python 3 versions of the skinner box outlined in the dissertation.
 
+6.2) GraphicsWithKeys: contains the skinner box visuals that will be used for the visualizations of the skinner trials. The mouse is manually controlled by the keyboard with 1/2 for turn and 3 for move.
+
+6.3) Batch3x3: runs the same algorithm as the original skinner box but with the new vision configuration for the mouse, the code to interpret stimuli and respond accordingly in a 3x3 grid envirionment. Writes the same information as the original to the output and the error.
+
+6.4) OneTrial: runs the original skinner box experiment one trial at a time (instead of all 300 immediately one after another). Takes inputs of enter to run the trial and q to quit. On each trial, outputs how many steps it took to complete and whether the trial ended on a successful lever press or not.
+
+6.5) OneTrialForGraphics: runs the same was as OneTrial but with additional mechanics (storing all of the responses and positions in an arraylist) to communicate with the graphics implementation.
+
+6.6) GraphicsConnected: connects to OneTrialForGraphics to show how the mouse acts on a given trial. It is run by going to the graphics window and pressing enter. The actions are shown in 2 steps: one frame for the current position of the mouse with a text label of what action it's about to take (turnLR/move/press/nothing) and then the resulting position of that action. Continues until the trial is over. Starting another trial resets the graphics to start showing the visuals for the new trial.
+
+6.7) OneTrial3x3: runs the one trial mechanic (with on graphics) in a 3x3 environment using the vision configuration. (see point D)
+
+6.8) OneTrial4x4: runs the one trial mechanic (with on graphics) in a 4x4 environment using the vision configuration. (see point D)
+
+6.9) OneTrial3x3ForG:
 
 A) getting initial files on tux: if you want to access the original CA files, they can be copied over from the bls directory using the instructions in the cause file in the reading folder: The cybernetic automaton model has been reimplemented in Go and is currently available on tux. The directory: /home/bls96/ca has the source code, configurations, and driver scripts for most of the examples described in the dissertation on the subject. In addition to that directory, there’s a copy of the executable in the /home/bls96/bin directory.
 
