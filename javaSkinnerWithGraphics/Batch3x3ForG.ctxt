@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=Batch3x3ForG
+comment1.params=
+comment1.target=int[]\ runBatch()
+comment2.params=loc\ dir
+comment2.target=int\ getVisionScenario(int,\ int)
+numComments=3
