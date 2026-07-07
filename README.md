@@ -65,7 +65,7 @@ A folder to organize all of our files throughout the 2026 STAR program
 6.14) BatchGraph: runs whatever batch algorithm it is connected to it, taking the information it sends and graphing it. Plots and connects how many steps it took to complete each trial in the batch and graphs a trend line for that batch based on the least squares regression formula. 
 
 
-7) blacboardCodeC: the bb.h and bb.c files are the original files provided for the blackboard described in the proto file in the reading folder. The rest of the files are an attempt to use the original blackboard structure, but are not fully fleshed out or functional.
+7) blackboardCodeC: the bb.h and bb.c files are the original files provided for the blackboard described in the proto file in the reading folder. The rest of the files are an attempt to use the original blackboard structure, but are not fully fleshed out or functional.
 
 
 8) blackboardRebuildPython: code that works on reimplementing the general structure of the blackboard described in the proto file in the reading folder for the context of the skinner blackboard. Each attempt
