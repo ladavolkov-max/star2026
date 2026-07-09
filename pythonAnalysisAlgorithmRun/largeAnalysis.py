@@ -37,7 +37,6 @@ if __name__ == "__main__":
     scriptDir = os.path.dirname(os.path.abspath(__file__)) #path of the code file
     slopesFilePath = os.path.join(scriptDir, "slopes.txt") #path of the file to store all slope information
     yintsFilePath = os.path.join(scriptDir, "yints.txt") #path of the file to store all yint infornation
-    resultsFilePath = os.path.join(scriptDir, "results.txt") #path of the file to store all results infornation
         
     #try to open the necessary files
     #openning with append mode so that we can add text to them
@@ -85,7 +84,6 @@ if __name__ == "__main__":
         lsrl = calcLineInfo(results)
         slopesFile.write(f"{lsrl[0]}\n")
         yintsFile.write(f"{lsrl[1]}\n")
-        resultsFile.write("\n")
 
 
     slopesFile.close()
