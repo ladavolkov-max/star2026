@@ -78,7 +78,7 @@ if __name__ == "__main__":
         gridWidth, gridHeight,
         randStartLoc, randStartDir,
         startingLocX, startingLocY, startingDir)
-        print(f"BATCH {i}----------------")
+        print(f"BATCH {i + 1}----------------")
         #running the actual trials
         results = tb.runBatch()
         lsrl = calcLineInfo(results)
