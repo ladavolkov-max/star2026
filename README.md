@@ -70,6 +70,8 @@ A folder to organize all of our files throughout the 2026 STAR program
 
 8) blackboardRebuildPython: code that works on reimplementing the general structure of the blackboard described in the proto file in the reading folder for the context of the skinner blackboard. Each attempt
 
+9) analysisBase: the 
+
 
 A) getting initial files on tux: if you want to access the original CA files, they can be copied over from the bls directory using the instructions in the cause file in the reading folder: The cybernetic automaton model has been reimplemented in Go and is currently available on tux. The directory: /home/bls96/ca has the source code, configurations, and driver scripts for most of the examples described in the dissertation on the subject. In addition to that directory, there’s a copy of the executable in the /home/bls96/bin directory.
 
