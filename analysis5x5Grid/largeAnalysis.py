@@ -71,7 +71,7 @@ if __name__ == "__main__":
     #innterWalls = None #optional
 
     #main loop of running batches and storing info
-    numBatchesToRun = 1
+    numBatchesToRun = 50
 
     for i in range(numBatchesToRun):
         #starting a new ca each time
