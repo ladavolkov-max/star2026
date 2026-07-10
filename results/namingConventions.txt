@@ -1,1 +1,5 @@
-
+This is a folder to store the results from all of our experiment runs! 
+We can organize them by following a specific naming convention so that we can easily put our results together
+File name structure:
+resultsType worldDimensions scenarioType nameOfPerson .txt
+ex) slopes3x3GridLada.txt
