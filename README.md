@@ -70,7 +70,15 @@ A folder to organize all of our files throughout the 2026 STAR program
 
 8) blackboardRebuildPython: code that works on reimplementing the general structure of the blackboard described in the proto file in the reading folder for the context of the skinner blackboard. Each attempt
 
-9) analysisBase: the 
+9) analysisBase: the basic structure that we use to run all of our mathematical data generation and analysis. It implements the algorithm to run the ca in a python class, which sets up a ca and its environment through instance variables (trials.py). It sets up a coordinate system (1-indexed) for the grid and establishes where the walls are using a dictionary of (wallX wallY wallDir) : wall?T/F It uses a new configuration that includes additional vision scenarios to consider (skinnerVisionMaze.cfg). It then runs several batches of trials and calculates the slope and y intercept for the line of best fit for each batch (largeAnalysis.py). It writes the results of each batch to specific files within the same directory to store the data (slopes.txt & yints.txt).
+
+10) analysis3x3Grid: sets up to run batches of trials in an empty 3x3 grid environment.
+
+11) analysis3x3Maze: sets up to run batches of trials in a 3x3 grid environment with internal walls to make a maze. For details about the maze, you can look at the image files inside the folder.
+
+12) analysis5x5Grid: sets up to run batches of trials in an empty 5x5 grid environment.
+
+13) analysis5x5Maze: sets up to run batches of trials in a 5x5 grid environment with internal walls to make a maze. For details about the maze, you can look at the image files inside the folder.
 
 
 A) getting initial files on tux: if you want to access the original CA files, they can be copied over from the bls directory using the instructions in the cause file in the reading folder: The cybernetic automaton model has been reimplemented in Go and is currently available on tux. The directory: /home/bls96/ca has the source code, configurations, and driver scripts for most of the examples described in the dissertation on the subject. In addition to that directory, there’s a copy of the executable in the /home/bls96/bin directory.
