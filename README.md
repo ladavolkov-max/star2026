@@ -72,13 +72,17 @@ A folder to organize all of our files throughout the 2026 STAR program
 
 9) analysisBase: the basic structure that we use to run all of our mathematical data generation and analysis. It implements the algorithm to run the ca in a python class, which sets up a ca and its environment through instance variables (trials.py). It sets up a coordinate system (1-indexed) for the grid and establishes where the walls are using a dictionary of (wallX wallY wallDir) : wall?T/F It uses a new configuration that includes additional vision scenarios to consider (skinnerVisionMaze.cfg). It then runs several batches of trials and calculates the slope and y intercept for the line of best fit for each batch (largeAnalysis.py). It writes the results of each batch to specific files within the same directory to store the data (slopes.txt & yints.txt).
 
-10) analysis3x3Grid: sets up to run batches of trials in an empty 3x3 grid environment.
+10) analysisFirst: the first version of a large scale analysis of running several batches of skinner trials and assessing the learning speed. Contains 4 situations: 3x3 grid, 3x3 maze, 5x5 grid, 5x5 maze. These scenarios all use a more robust configuration file for seeing different possible situations within a maze (see point D). For each one, runs the batches and records the slope and y int of the trend line for each into a separate folder. Note: the 5x5 maze has trials2.py and largeAnalysis2.py, which is a different more optimized implementation of running the trials and recording the results that is then used for later analysis algorithms.
 
-11) analysis3x3Maze: sets up to run batches of trials in a 3x3 grid environment with internal walls to make a maze. For details about the maze, you can look at the image files inside the folder.
+10.1) analysis3x3Grid: sets up to run batches of trials in an empty 3x3 grid environment.
 
-12) analysis5x5Grid: sets up to run batches of trials in an empty 5x5 grid environment.
+10.2) analysis3x3Maze: sets up to run batches of trials in a 3x3 grid environment with internal walls to make a maze. For details about the maze, you can look at the image files inside the folder.
 
-13) analysis5x5Maze: sets up to run batches of trials in a 5x5 grid environment with internal walls to make a maze. For details about the maze, you can look at the image files inside the folder.
+10.3) analysis5x5Grid: sets up to run batches of trials in an empty 5x5 grid environment.
+
+10.4) analysis5x5Maze: sets up to run batches of trials in a 5x5 grid environment with internal walls to make a maze. For details about the maze, you can look at the image files inside the folder.
+
+11) analysisPunishment: analyzes 4 scenarios, comparing the CA's performance in a 3x3 maze and a 5x5 maze without vs with punishment input. All the versions run the same as analysisFist, just using the updated implementation of trials2.py and largeAnalysis2.py for better record keeping and speed. The versions with punishments run with a different configuration file (see point D), which inclNote: all scenarios run the program with caNew, an updated faster model of the CA mechanism provided by the professor. 
 
 
 A) getting initial files on tux: if you want to access the original CA files, they can be copied over from the bls directory using the instructions in the cause file in the reading folder: The cybernetic automaton model has been reimplemented in Go and is currently available on tux. The directory: /home/bls96/ca has the source code, configurations, and driver scripts for most of the examples described in the dissertation on the subject. In addition to that directory, there’s a copy of the executable in the /home/bls96/bin directory.
