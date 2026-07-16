@@ -146,6 +146,10 @@ class TrialBatch:
                     canMove = self.canMoveForward()
                     if canMove:
                         self.move()
+                    else:
+                        #tried to go into a wall, send punishment signal
+                        self.__pid.stdin.write(b"22/1\n")
+                        self.__pid.stdout.readline()
                 elif response == b'4': #press bar
                     if (self.__locX == self.__locBarX and
                         self.__locY == self.__locBarY and
