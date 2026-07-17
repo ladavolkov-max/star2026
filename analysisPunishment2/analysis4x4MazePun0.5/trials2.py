@@ -148,7 +148,7 @@ class TrialBatch:
                         self.move()
                     else:
                         #tried to go into a wall, send punishment signal
-                        self.__pid.stdin.write(b"22/1\n")
+                        self.__pid.stdin.write(b"22/0.5\n")
                         self.__pid.stdout.readline()
                 elif response == b'4': #press bar
                     if (self.__locX == self.__locBarX and
@@ -156,7 +156,7 @@ class TrialBatch:
                         self.__dir == self.__dirBar):
                         successfulPress = True
                         # lever pressed, send reward signal
-                        self.__pid.stdin.write(b"21/0.5\n")
+                        self.__pid.stdin.write(b"21/1\n")
                         self.__pid.stdout.readline()
                         break #breaks out of the step loop, goes to next trial
                 else:
@@ -164,7 +164,7 @@ class TrialBatch:
                 
             #---------------------------------------inner loop
             #print statement for debugging
-            #print("Trial: " + str(trial) + ", Steps Taken: " + str(stepsTaken) + ", Successful Press: " + str(successfulPress))
+            print("Trial: " + str(trial) + ", Steps Taken: " + str(stepsTaken) + ", Successful Press: " + str(successfulPress))
             #add to results list
             #iiiiiiiiiiiii
             results.append(stepsTaken)
