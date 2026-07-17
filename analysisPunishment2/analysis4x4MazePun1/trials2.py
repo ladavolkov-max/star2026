@@ -164,7 +164,7 @@ class TrialBatch:
                 
             #---------------------------------------inner loop
             #print statement for debugging
-            #print("Trial: " + str(trial) + ", Steps Taken: " + str(stepsTaken) + ", Successful Press: " + str(successfulPress))
+            print("Trial: " + str(trial) + ", Steps Taken: " + str(stepsTaken) + ", Successful Press: " + str(successfulPress))
             #add to results list
             #iiiiiiiiiiiii
             results.append(stepsTaken)
