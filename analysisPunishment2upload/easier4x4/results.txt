@@ -1,0 +1,5 @@
+avg b values for each scenario:
+regular: 0.014851283
+pun 1: 0.004108092
+pun 0.5: 0.006062915
+pun 0.25: 0.009332471
