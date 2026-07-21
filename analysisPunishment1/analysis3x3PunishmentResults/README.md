@@ -1,6 +1,12 @@
-# 3x3 Punishment Strength Results
+# 3x3 Regular vs Punishment Results
 
-This folder contains Aya's full 3x3 comparison runs for regular learning and punishment strengths `1.0`, `0.5`, and `0.25`.
+This folder summarizes the full 3x3 maze comparison for regular learning and punishment strengths `1.0`, `0.5`, and `0.25`.
+
+The quickest files to look at are:
+
+- `smoothed_learning_curve.svg`
+- `condition_summary.csv`
+- `b_value_summary.csv`
 
 ## Run Setup
 
@@ -22,6 +28,8 @@ All four conditions used the same 3x3 maze setup:
 | punishment_0.5 | 81.04 | 71.99 | 11.2% | 2003 | 26.7% |
 | punishment_0.25 | 64.19 | 62.97 | 1.9% | 1759 | 23.5% |
 
+The clearest improvement was with punishment strength `0.5`. Punishment strength `1.0` looks too strong because it caused the highest failure rate. Punishment strength `0.25` had the lowest failure rate, but barely improved across batches.
+
 ## B Values
 
 The `b` values use the linearized form of:
@@ -39,13 +47,11 @@ with `a = 150`, matching `maxStepsPerTrial`.
 | punishment_0.5 | 0.01097389 | 0.00429131 | 0.02144000 |
 | punishment_0.25 | 0.01519213 | 0.00430853 | 0.02280475 |
 
-Higher `b` means a steeper downward fitted curve within the batches. Because the regular 3x3 baseline is unstable across batches, the `b` values should be read together with the learning curves and failure rates.
+Higher `b` means a steeper downward fitted curve within each batch. The regular condition has a high average `b`, but the batch graph shows that the regular baseline is unstable across batches, so the `b` values should be interpreted together with the learning curves and failure rates.
 
 ## Interpretation
 
-Punishment strength `1.0` looks too strong because it has the highest failure rate. Strength `0.5` shows the clearest improvement over time in the batch summaries. Strength `0.25` has the lowest failure rate but only a small improvement. The regular baseline starts low but becomes unstable, so this 3x3 maze is probably not a clean final baseline.
-
-Best next step: try a simplified 5x5 maze with a few walls and compare regular vs punishment strength `0.5`.
+This 3x3 maze is useful as an early comparison, but it is noisy. The next test should be a simplified 5x5 maze with a few walls, comparing regular learning against punishment strength `0.5`.
 
 ## Files
 
@@ -57,8 +63,8 @@ Best next step: try a simplified 5x5 maze with a few walls and compare regular v
 | `b_value_summary.csv` | Average/min/max `b` values by condition. |
 | `raw_learning_curve.svg` | Raw average steps per batch graph. |
 | `smoothed_learning_curve.svg` | 5-batch rolling average graph. |
-| `raw_data/` | The original `batch0.txt` through `batch49.txt` files for each condition. |
-| `calculate_b_values.py` | Script to regenerate `b_values.csv` and `b_value_summary.csv` from `raw_data/`. |
+| `raw_trial_steps.csv` | All raw trial step counts in one file: condition, batch, trial, steps. |
+| `calculate_b_values.py` | Script to regenerate `b_values.csv` and `b_value_summary.csv` from `raw_trial_steps.csv`. |
 
 To recalculate the `b` values:
 

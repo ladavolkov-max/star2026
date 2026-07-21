@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import csv
 import math
+from collections import defaultdict
 from pathlib import Path
 
 
@@ -17,14 +18,6 @@ CONDITIONS = [
 ]
 
 
-def batch_number(path: Path) -> int:
-    return int(path.stem.replace("batch", ""))
-
-
-def read_steps(path: Path) -> list[float]:
-    return [float(line.strip()) for line in path.read_text().splitlines() if line.strip()]
-
-
 def calculate_b_value(steps: list[float], a: int = MAX_STEPS_PER_TRIAL) -> float:
     """Fit y = a * e^(-bt) using Lada's linearized equation."""
     t_values = range(1, len(steps) + 1)
@@ -35,22 +28,28 @@ def calculate_b_value(steps: list[float], a: int = MAX_STEPS_PER_TRIAL) -> float
 
 def main() -> None:
     root = Path(__file__).resolve().parent
-    raw_data = root / "raw_data"
+    raw_trial_steps_path = root / "raw_trial_steps.csv"
+    grouped_steps: dict[tuple[str, int], list[float]] = defaultdict(list)
+
+    with raw_trial_steps_path.open(newline="") as f:
+        reader = csv.DictReader(f)
+        for row in reader:
+            grouped_steps[(row["condition"], int(row["batch"]))].append(float(row["steps"]))
 
     b_rows: list[dict[str, str | int]] = []
     summary_rows: list[dict[str, str | int]] = []
 
     for condition in CONDITIONS:
         values: list[float] = []
-        condition_dir = raw_data / condition
-        for path in sorted(condition_dir.glob("batch*.txt"), key=batch_number):
-            steps = read_steps(path)
+        batch_numbers = sorted(batch for row_condition, batch in grouped_steps if row_condition == condition)
+        for batch in batch_numbers:
+            steps = grouped_steps[(condition, batch)]
             b_value = calculate_b_value(steps)
             values.append(b_value)
             b_rows.append(
                 {
                     "condition": condition,
-                    "batch": batch_number(path),
+                    "batch": batch,
                     "trials": len(steps),
                     "b_value": f"{b_value:.8f}",
                 }
