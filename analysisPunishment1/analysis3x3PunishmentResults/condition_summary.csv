@@ -1,0 +1,5 @@
+condition,data_folder,batches,total_trials,first_batch_avg,last_batch_avg,percent_improvement,first_5_avg,last_5_avg,first_5_to_last_5_improvement,total_max_step_failures,failure_rate,best_batch_avg,worst_batch_avg
+regular,raw_data/regular,50,7500,22.9267,147.1933,-542.02,29.5587,85.0080,-187.59,1929,25.72,19.0333,150.0000
+punishment_1.0,raw_data/punishment_1.0,50,7500,109.7867,105.4867,3.92,108.6947,99.6000,8.37,3270,43.60,62.7467,132.0800
+punishment_0.5,raw_data/punishment_0.5,50,7500,61.5200,48.6133,20.98,81.0400,71.9933,11.16,2003,26.71,23.1133,119.6333
+punishment_0.25,raw_data/punishment_0.25,50,7500,63.9000,61.4333,3.86,64.1933,62.9653,1.91,1759,23.45,21.5800,120.0133
