@@ -1,0 +1,5 @@
+avg b values for each situation:
+reg/none: 0.006322217
+pun 1: 0.001620249
+pun 0.5: 0.001871369
+pun 0.25: 0.002633586
