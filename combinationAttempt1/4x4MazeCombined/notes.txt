@@ -1,0 +1,7 @@
+* THE MAX NUMBER OF STEPS IS BACK TO 200
+* there is more than one right action for certain tiles
+so they could belong to more than one region I have just
+arbitrarily separated them
+* both regions 1 and 2 have the best action as going 
+right so technically can be combined into 1 region
+but I feel like it's more map-like to separate them

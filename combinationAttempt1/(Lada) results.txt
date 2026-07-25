@@ -1,0 +1,4 @@
+3x3 results ---
+combined: 0.007460511
+vision: 0.018063829
+spatial: 0.018115164

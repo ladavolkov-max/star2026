@@ -1,0 +1,4 @@
+* THE MAX NUMBER OF STEPS HAS BEEN INCREASED TO 250
+* there is more than one right action for certain tiles
+so they could belong to more than one region I have just
+arbitrarily separated them
