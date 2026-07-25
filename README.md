@@ -90,7 +90,13 @@ A folder to organize all of our files throughout the 2026 STAR program
 
 14) analysisBeta: collects data for a 4x4 maze scenario under different values of the beta parameter in the configuration files. Has the code (not the individual data because that would be too many files) for each setting in a separate folder. Uses the same mathematical fit model and method of calculating it through excel as analysisPunishment2 (see point E).
 
-15) batchGraphing: python scripts to run on the batch#.txt files generated from trials. For each of the scripts, provide the file paths for which ones you want to graph. The way to do so is described in the comments: right click on the file, hold option key, and click "Copy "__" as Pathname". oneFileGraph plots a single file, severalFileGraph plots multiple files in different colors, and severalGroupsGraph plots several files grouped by color. Feel free to play around with any of the visual settings such as line thickness/color for better visibility. 
+15) batchGraphing: python scripts to run on the batch#.txt files generated from trials. For each of the scripts, provide the file paths for which ones you want to graph. The way to do so is described in the comments: right click on the file, hold option key, and click "Copy "__" as Pathname". It has several different ways to graph different files. Feel free to play around with any of the visual settings such as line thickness/color for better visibility.
+
+15.1) oneFileGraph: give the path to one data file and it will graph it
+
+15.2) severalFilesGraph.py: give the path to multiple data files in a list and it will graph them on top of each other with different colors for each file
+
+15.3) 
 
 A) getting initial files on tux: if you want to access the original CA files, they can be copied over from the bls directory using the instructions in the cause file in the reading folder: The cybernetic automaton model has been reimplemented in Go and is currently available on tux. The directory: /home/bls96/ca has the source code, configurations, and driver scripts for most of the examples described in the dissertation on the subject. In addition to that directory, there’s a copy of the executable in the /home/bls96/bin directory.
 
