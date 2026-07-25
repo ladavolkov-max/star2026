@@ -96,7 +96,9 @@ A folder to organize all of our files throughout the 2026 STAR program
 
 15.2) severalFilesGraph.py: give the path to multiple data files in a list and it will graph them on top of each other with different colors for each file
 
-15.3) 
+15.3) severalGroupsGraph.py: give the path to several files in a few groups (such as different scenarios), adding them to several lists organized by group. Then assign each group a unique color in the dictionary. The program then graphs all of the files on top of each other, with files from the same group being the same color.
+
+15.4) animatedGraph.py: generates an animation of all the data from a specific group, with the individual graphs appearing one right after the other. Provide the name of the scenarion for the graph label, the directory where all of your files are located, and the number of the batch up through which you want to show the results. 
 
 A) getting initial files on tux: if you want to access the original CA files, they can be copied over from the bls directory using the instructions in the cause file in the reading folder: The cybernetic automaton model has been reimplemented in Go and is currently available on tux. The directory: /home/bls96/ca has the source code, configurations, and driver scripts for most of the examples described in the dissertation on the subject. In addition to that directory, there’s a copy of the executable in the /home/bls96/bin directory.
 
