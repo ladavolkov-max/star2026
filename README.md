@@ -98,7 +98,7 @@ A folder to organize all of our files throughout the 2026 STAR program
 
 15.3) severalGroupsGraph.py: give the path to several files in a few groups (such as different scenarios), adding them to several lists organized by group. Then assign each group a unique color in the dictionary. The program then graphs all of the files on top of each other, with files from the same group being the same color.
 
-15.4) animatedGraph.py: generates an animation of all the data from a specific group, with the individual graphs appearing one right after the other. Provide the name of the scenarion for the graph label, the directory where all of your files are located, and the number of the batch up through which you want to show the results. 
+15.4) animatedGraph.py: generates an animation of all the data from a specific group, with the individual graphs appearing one right after the other. Provide the name of the scenarion for the graph label, the directory where all of your files are located, and the number of the batch up through which you want to show the results. For this version, make sure to double check the values for the max steps per trial and the trials per batch and change the a and xSmooth values accordingly.
 
 15.5) animatedBestFit.py: works the same way as animatedGraph.py, but for every batch displayed also draws a line of best fit that was calculated for it (in the form of y = a * e^(-bt)).
 
