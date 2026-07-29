@@ -1,0 +1,29 @@
+* because the current equations for adjusting probabilities with punishment can 
+yield unexpected results, we are shifting to achieving a similar effect to punishment
+(increasing probabilities of not wall-bumping actions and decreasing probabilities of
+wall-bumping actions) without actually sending a punishment signal, instead only
+operating with reward
+* we will send a small (weaker input strength) reward to the CA every time it makes an
+action that isn't bumping into a wall
+* the way that the reward mechanism functions is that it only updates the probabilities
+of the actions that have been made since the last reward has been applied, meaning that
+it doesn't go all the way back 
+* for the smaller reward strength: we don't want it to be too weak to have no effect but 
+we also don't want it to be too small so that it doesn't overpower the main reward (the 
+mouse will be content enough with just the small rewards and so will do whatever to not
+bump into walls but won't care about actually reaching the bar)
+* because of this, we will try to test a few different strengths of the small reward to 
+see which one is most effective at teaching the mouse to not run into walls but also stay
+motivated to keep searching for the bar as its main overall goal
+* the small non-bump reward is also applied to the 0 response. This is because in the
+version with the punishment state, the punishment was only applied to the wall-bump 
+action so it decreased the probability of that specific response and therefore increased
+the probability of everything else. Therefore since we are trying to recreate this
+implicit mechanism, doing nothing will be counted as a successful non-bump action
+* for future experiments with reward for experiencing a new situation or reaching a 
+certain milestone within the maze, I think it would exclude the 0 response since it 
+does not contribute to any progress through the maze
+* the possible levels of reward could be, from smallest to largest: not running into a 
+wall, experiencing a new situation, reaching a maze milestone, reaching the reward/food
+* I have sent an email to the professor asking about rewarding the 0 response and 
+only rewarding actions since the last reward
