@@ -55,7 +55,7 @@ if __name__ == "__main__":
         results = tb.runBatch()
         #create a brand new file for this batch (e.g. "batch 1.txt") and write the
         #number of steps taken in each trial
-        batchFilePath = os.path.join(scriptDir, f"batch39.txt")
+        batchFilePath = os.path.join(scriptDir, f"batch{i}.txt")
         with open(batchFilePath, "w") as batchFile:
             for stepsTaken in results:
                 batchFile.write(f"{stepsTaken}\n")
