@@ -1,0 +1,25 @@
+* NUM TRIALS AND MAX STEPS HAVE BOTH BEEN CHANGED TO 100
+* this is the continuation of using a small reward for all 
+actions that don't run into the wall as a substitute for 
+punishing running into a wall
+* because the reward is applied very short term (only actions 
+taken since the previous reward are enforced), we are not 
+actually making the CA learn to solve the maze and find the 
+food, but just the basic habit of not running into walls
+* since we are tracking this different metric now, our previous
+data tracking of steps to complete the maze are not reflective
+* instead, we now want to track if the model is learning to 
+avoid running into walls, so we will keep track of how many 
+punished vs non punished actions it takes within each trial
+* another concern that we want to explore is that if we reward
+the 0 (do nothing) action due to it not running into a wall,
+the CA risks getting stuck in a loop of never doing anything. 
+Because of this, we will also keep track of the proportion of 
+non punishable actions that are 0
+* the results will be published in 3 files for each batch. The
+first file will contain the total actions taken per trial paired
+with how many of those actions were non-punished. The second
+file will contain this information as a proportion for each 
+trial. The third file will list the proportions per trials of
+what fraction of the non-punished actions were 0 actions
+* all of the files will be stored and organized in a data folder
