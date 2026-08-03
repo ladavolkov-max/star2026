@@ -108,7 +108,7 @@ A folder to organize all of our files throughout the 2026 STAR program
 
 18) analysisPunishment3: sets up tests on individual CAs to sidestep the issue of weird behavior in punishment reinforcement by changing the probabilities through reward only. The basic idea is that rewarding all actions except for running into walls should achieve the same mathematical effect as punishing running into walls. More detailed notes on the setup are included in a text file within each folder, which is recommended to read if you're looking for more information on the reward setup (as always reach out if you have any questions). It has the setups for running a vision and a spatial CA testing different strengths of the new small-scale reward signal.
 
-19) analysisPunishment4:
+19) analysisPunishment4: tests out different scenarios of the inverse punishment through reward mechanic on individual CAs instead of the combined one. Also, tracks learning not in terms of solving the maze but in terms of how well the CA learns to not run into walls. It does this through tracking the proportion of non-punished actions out of total actions taken, and the proportion of zero/nothing actions out of non-punished actions. It does calculations with these results for the vision and spatial CAs, trying out small reward strengths of 0.05 and 0.1 for each. General details are described in notes.txt, and calculation details are described in mathImage.jpg.
 
 20) combinationAttempt3:
 
