@@ -110,7 +110,7 @@ A folder to organize all of our files throughout the 2026 STAR program
 
 19) analysisPunishment4: tests out different scenarios of the inverse punishment through reward mechanic on individual CAs instead of the combined one. Also, tracks learning not in terms of solving the maze but in terms of how well the CA learns to not run into walls. It does this through tracking the proportion of non-punished actions out of total actions taken, and the proportion of zero/nothing actions out of non-punished actions. It does calculations with these results for the vision and spatial CAs, trying out small reward strengths of 0.05 and 0.1 for each. General details are described in notes.txt, and calculation details are described in mathImage.jpg.
 
-20) combinationAttempt3:
+20) combinationAttempt3: uses the results of analysisPunishment4 to implement more robust 
 
 A) getting initial files on tux: if you want to access the original CA files, they can be copied over from the bls directory using the instructions in the cause file in the reading folder: The cybernetic automaton model has been reimplemented in Go and is currently available on tux. The directory: /home/bls96/ca has the source code, configurations, and driver scripts for most of the examples described in the dissertation on the subject. In addition to that directory, there’s a copy of the executable in the /home/bls96/bin directory.
 
