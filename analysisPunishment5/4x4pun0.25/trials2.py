@@ -76,9 +76,9 @@ class TrialBatch:
         #runs if the ca and config files are in the SAME DIRECTORY as the code
         self.__scriptDir = os.path.dirname(os.path.abspath(__file__)) #path of the code file
         if platform.system() == "Windows":
-            self.__caPath = os.path.join(self.__scriptDir, "caNew.exe") #path of the CA executable
+            self.__caPath = os.path.join(self.__scriptDir, "caNewPun.exe") #path of the CA executable
         else:
-            self.__caPath = os.path.join(self.__scriptDir, "caNew") #path of the CA executable
+            self.__caPath = os.path.join(self.__scriptDir, "caNewPun") #path of the CA executable
         self.__cfgPath = os.path.join(self.__scriptDir, "skinnerPunishment.cfg") #path of the configuration file
         self.__pid = Popen([self.__caPath, self.__cfgPath], stdin=PIPE, stdout=PIPE, bufsize=0) #starting up the ca process
 
