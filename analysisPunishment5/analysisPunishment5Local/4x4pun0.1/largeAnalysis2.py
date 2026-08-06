@@ -12,7 +12,7 @@ if __name__ == "__main__":
 
     #creating the scenario that we want to run
     numTrialsInBatch = 150
-    maxStepsPerTrial = 300
+    maxStepsPerTrial = 200
     gridWidth = 4 #num columns in grid
     gridHeight = 4 #num columns in grid
     randStartLoc = False
