@@ -112,9 +112,9 @@ A folder to organize all of our files throughout the 2026 STAR program
 
 20) combinationAttempt3: uses the results of analysisPunishment4 to implement more robust combined CAs. combinedSmallReward implements the reward for not running into walls with the strengths determined in analysisPunishment4. combinedMediumReward implements a third level of reward whenever the CA reaches a new region. The strengths for the medium reward have not been tested.
 
-21) analysisPunishment5:
+21) analysisPunishment5: Runs a single vision CA with the new CA executable that has the updated punishment equations. Punishments are applied when the CA runs into a wall. Tests various strengths to compare the learning speed.
 
-22) combinationAttempt4:
+22) combinationAttempt4: Implements a combined CA structure similar to the one in previous combination attempts, however now pre-trains the individual sensor CAs before using them for the combined version. It runs a set of trials with the vision on its own, the spatial on its own, and then uses these already trained CAs in the combined version. Results show that it performs worse than the individual vision and spatial CAs on its own but better than the previous combined version.
 
 A) getting initial files on tux: if you want to access the original CA files, they can be copied over from the bls directory using the instructions in the cause file in the reading folder: The cybernetic automaton model has been reimplemented in Go and is currently available on tux. The directory: /home/bls96/ca has the source code, configurations, and driver scripts for most of the examples described in the dissertation on the subject. In addition to that directory, there’s a copy of the executable in the /home/bls96/bin directory.
 
